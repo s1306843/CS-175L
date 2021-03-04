@@ -6,24 +6,57 @@ public class BankAccountTester {
 		
 		Scanner in = new Scanner(System.in);
 		
-		System.out.print("Please input your starting balance: ");
+		//User enters how much they want to first put into their account: 
+		System.out.println("Please enter amount to start the account: ");
 		double startBal = in.nextDouble();
 		
-		//Adds Bank Account method to BankAccountTester class 
-		BankAccount myBankAccount = new BankAccount(startBal);
+		//User enters the interest rate here:
+		System.out.println("Please enter the interest rate for this account: ");
+		double interestPct = in.nextDouble();
 		
-		//Asks the user how much they want to withdrawal
-		System.out.println("Please input how much money you would like to withdrawal: ");
-		double withDrawAmount = in.nextDouble();
-		myBankAccount.withdraw(withDrawAmount);
+		BankAccount myBankAccount = new BankAccount(startBal, interestPct);
 		
-		//Asks the user how much money they want to deposit 
-		System.out.println("Please input the amount of money you would like to deposit: ");
+		//User enters how much they want to deposit into their account:
+		System.out.println("Please enter amount to deposit in the account: ");
 		double depositAmount = in.nextDouble();
 		myBankAccount.deposit(depositAmount);
 		
-		//Displays the current balance to the user 
-		System.out.println("Your Current Balance is: $" + myBankAccount.getBalance());
+		//User enters how much they want to Withdraw from their account:
+		double accountBal = myBankAccount.getBalance();
+		
+		System.out.println("Please enter amount to withdraw from the account: ");
+		double withDrawAmount = in.nextDouble();
+		myBankAccount.withdraw(withDrawAmount);
+		
+		double withdrawBalance = myBankAccount.getBalance();
+		
+		if(withdrawBalance == accountBal) 
+		{
+			
+			System.out.println("Please enter amount to withdraw from the account: ");
+			withDrawAmount = in.nextDouble();
+			myBankAccount.withdraw(withDrawAmount);
+			
+		}
+		
+		//User inputs 'Yes' or 'No' on whether they want to generate interest or not:
+		System.out.println("If you want me to generate interest, enter 'Yes': ");
+		String answer = in.next();
+		
+		if(answer.compareTo("Yes") == 0) 
+		{
+			
+			myBankAccount.calcInterest();
+			System.out.println("Your account balance is: $" + myBankAccount.getBalance());
+			
+		}
+		
+		else 
+		{
+			//If no interest is generated, then this is printed for the user
+			System.out.println("Your account balance is: $" + myBankAccount.getBalance());
+			
+		}
 		
 	}
 
