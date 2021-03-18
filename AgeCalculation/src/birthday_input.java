@@ -1,7 +1,7 @@
 import java.time.format.DateTimeFormatter;
 import javax.swing.JOptionPane;
 import javax.swing.JOptionPane;
-
+import java.lang.Math;
 public class birthday_input {
 
 	public static void main(String[] args) {
@@ -44,7 +44,7 @@ DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("MM/DD/YYYY");
 		{monthAge = monthAge;}
 
 
-JOptionPane.showMessageDialog(null, "You are " +yearAge+" years and " +monthAge+" month(s) old");
+JOptionPane.showMessageDialog(null, "You are " +yearAge+" years and " +(Math.abs(monthAge))+" month(s) old");
 	
 	}
 
