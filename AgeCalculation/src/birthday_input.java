@@ -35,12 +35,10 @@ DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("MM/DD/YYYY");
 
 	if(intMonth_date <= intMonth_birthday)
 		{yearAge = yearAge - 1;}
-	else
-		{yearAge = yearAge;}
-	if(intDay_date < intDay_birthday)
+		
+	else if(intDay_date < intDay_birthday)
 		{monthAge = monthAge - 1;}
-	else
-		{monthAge = monthAge;}
+	
 
 
 JOptionPane.showMessageDialog(null, "You are " +yearAge+" years and " +(Math.abs(monthAge))+" month(s) old");
