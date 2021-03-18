@@ -1,4 +1,3 @@
-import java.time.format.DateTimeFormatter;
 import javax.swing.JOptionPane;
 import java.lang.Math;
 public class birthday_input {
@@ -9,7 +8,6 @@ String input_Birthday = JOptionPane.showInputDialog("Please enter your birthday 
 
 String input_Date = JOptionPane.showInputDialog(" Please enter today's date (MM/DD/YYYY)");	
 
-DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("MM/DD/YYYY");
 
 /* The section below only returns the parts of the string that is specified below (substring).
  For example, the strYear_birthday String variable will return everything the user inputs for "YYYY"
