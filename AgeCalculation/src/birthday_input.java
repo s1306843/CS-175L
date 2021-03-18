@@ -1,6 +1,5 @@
 import java.time.format.DateTimeFormatter;
 import javax.swing.JOptionPane;
-import javax.swing.JOptionPane;
 import java.lang.Math;
 public class birthday_input {
 
