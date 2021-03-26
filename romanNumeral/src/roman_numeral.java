@@ -90,7 +90,7 @@ public class roman_numeral {
 						y = y - 5;
 						RN = RN + "V";
 					}
-					else if (y >= 5)
+					else if (y >= 4)
 					{
 						y = y - 4;
 						RN = RN + "IV";
