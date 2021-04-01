@@ -1,7 +1,3 @@
-/**
-   A bank account has a balance and a mechanism for
-   applying interest or fees at the end of the month.
-*/
 public class BankAccount
 {
    private double Balance;
@@ -9,24 +5,16 @@ public class BankAccount
    private double Interest;
    private double Deposit;
    private double Withdraw;
-   
-
-   /**
-      Constructs a bank account with zero balance.
-   */
-   public BankAccount(double startBal, double interestPct)
+  
+   public BankAccount(double startBalance, double interestPct)
    {
 	   
-      Balance = startBal;
+      Balance = startBalance;
       InterestRate = interestPct;
       
       System.out.println("You created a new account with $" + Balance + " balance and an interest rate of " + InterestRate + ".");
    }
 
-   /**
-      Makes a deposit into this account.
-      @param amount the amount of the deposit
-   */
    public void deposit(double amount)
    {
 	   
@@ -38,11 +26,6 @@ public class BankAccount
       
    }
 
-   /**
-      Makes a withdrawal from this account, or charges a penalty if
-      sufficient funds are not available.
-      @param amount the amount of the withdrawal
-   */
    public void withdraw(double amount)
    {
 	   
@@ -73,12 +56,14 @@ public class BankAccount
 	   Balance = Interest + Balance;
 	   
    }
+   public void userThreshold(double startBal, double interestPct)
+   {
+	   
+	   Balance = startBal;
+	   InterestRate = interestPct;
+	   
+   } 
    
-   /**
-      Gets the current balance of this bank account.
-      @return the current balance
-   */
-
    public double getBalance()
    {
       return Balance;
