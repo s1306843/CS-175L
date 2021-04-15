@@ -14,7 +14,7 @@ public class randArrayAndSearch
 		int topCount = 0;
 		int repeatingNumber = numbersList[0];
 		//Prints out a normal array of integers 
-		System.out.println("Standard Array -->");
+		System.out.println("<<< Standard Array >>>");
 		System.out.println();
 		for (int n = 0; n < numbersList.length; n++)
 		{
@@ -28,12 +28,12 @@ public class randArrayAndSearch
 		Arrays.sort(numbersList);
 		
 		//A sorted array just makes it easier to find the mode / smallest and largest numbers 
-		System.out.println("Sorted Array -->");
+		System.out.println("<<< Sorted Array >>>");
 		System.out.println();
-		for (int i = 0; i < numbersList.length; i++)
+		for (int n = 0; n < numbersList.length; n++)
 		{
 			
-			System.out.print(numbersList[i] + " ");
+			System.out.print(numbersList[n] + " ");
 			
 		}
 		/*Prints out the smallest / greatest numbers in the array. 
